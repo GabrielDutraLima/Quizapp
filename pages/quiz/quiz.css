@@ -8,6 +8,8 @@
 
 :root {
     --bg-color: #f4f6fa;
+    --bg-span: #f4f6fa;
+    --color-span: #626c7f;
     --purple: #a729f5;
     --purple-hover: rgba(167, 41, 245, 0.7);
     --white: #fff;
@@ -28,6 +30,7 @@
 body.escuro {
     
     --bg-color: #313e51;
+    --color-span: #313e51;
     --bg-mobile: url( ../../assets/images/pattern-background-mobile-dark.svg);
     --bg-desktop: url(  ../../assets/images/pattern-background-desktop-dark.svg);
     --primary-text-color: #fff;
@@ -203,8 +206,8 @@ main {
     display: block;
     width: 40px;
     height: 40px;
-    background: var(--bg-color);
-    color: var(--secundary-text-color);
+    background: var(--bg-span);
+    color: var(--color-span);
 
     display: flex;
     align-items: center;
