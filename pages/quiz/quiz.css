@@ -234,6 +234,11 @@ main {
     cursor: pointer;
 }
 @media(min-width: 1100px) {
+    body {
+        background: var(--bg-desktop) var(--bg-color);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     header {
         margin-block: 81px;
         max-width: 1160px;
