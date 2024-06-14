@@ -15,7 +15,7 @@
     --white: #fff;
     --green: #26d782;
     --red: #ee5454;
-    --button-bg: #fff;
+    --pontuacao-bg: #fff;
     --primary-text-color: #313e51;
     --secundary-text-color: #626c7f;
     --bg-html: #fff1e9;
@@ -35,7 +35,7 @@ body.escuro {
     --bg-desktop: url(  ../../assets/images/pattern-background-desktop-dark.svg);
     --primary-text-color: #fff;
     --secundary-text-color: #abc1e1;
-    --button-bg: #3b4d66;
+    --pontuacao-bg: #3b4d66;
     --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
 
 }
@@ -101,6 +101,42 @@ header {
     border-radius: 999px;
 }
 
+main {
+    padding: 32px 24px;
+}
+
+main h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: var(--primary-text-color);
+}
+
+main h2 strong {
+    font-family: 500;
+}
+
+.pontuacao {
+    background: var(--pontuacao-bg);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+}
+
+.pontuacao strong {
+    font-size: 88px;
+    color: var(--primary-text-color);
+    font-weight: 500;
+
+}
+
+.pontuacao p {
+    color: var(--secundary-text-color);
+    font-size: 18px;
+}
 
 @media(min-width: 1110px) {
     body {
