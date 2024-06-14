@@ -92,6 +92,8 @@ header {
     border: 0;
     border-radius: 999px;
     padding: 4px;
+    display: flex;
+    cursor: pointer;
 }
 
 .tema button div {
