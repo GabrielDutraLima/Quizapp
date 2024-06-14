@@ -195,4 +195,19 @@ main button:hover {
         height: 20px;
     } 
 
+    main {
+        display: flex;
+        gap: 140px;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+
+    main h2,
+    main > div {
+        width: 100%;
+    }
+
+    main h2 {
+        font-size: 64px;
+    }
 }
