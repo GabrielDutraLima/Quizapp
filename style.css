@@ -3,35 +3,33 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
-    -webkit-font-smoothing: antialiased; 
+    --webkit-font-smoothing: antialiased;
 }
 
 :root {
     --bg-color: #f4f6fa;
     --purple: #a729f5;
-    --white: #fff;
-    --button-bg: #fff;
     --primary-text-color: #313e51;
-    --secundary-text-color: #626c7f;
+    --secondary-text-color: #626c7f;
+    --button-bg: #fff;
+    --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
     --bg-html: #fff1e9;
-    --bg-css: #c0fdef;
+    --bg-css: #e0fdef;
     --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f6e7ff;
-    --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
-    --bg-mobile: url( ./assets/images/pattern-background-mobile-light.svg);
-    --bg-desktop: url(  ./assets/images/pattern-background-desktop-light.svg);
+    --white: #fff;
+    --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
+    --bg-desktop: url(./assets/images/pattern-background-desktop-light.svg);
 }
 
 body.escuro {
-    
     --bg-color: #313e51;
-    --bg-mobile: url( ./assets/images/pattern-background-mobile-dark.svg);
-    --bg-desktop: url(  ./assets/images/pattern-background-desktop-dark.svg);
+    --bg-mobile: url(./assets/images/pattern-background-mobile-dark.svg);
+    --bg-desktop: url(./assets/images/pattern-background-desktop-dark.svg);
     --primary-text-color: #fff;
-    --secundary-text-color: #abc1e1;
+    --secondary-text-color: #abc1e1;
     --button-bg: #3b4d66;
     --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
-
 }
 
 body {
@@ -55,6 +53,7 @@ header {
     align-items: center;
     gap: 8px;
 }
+
 .tema img {
     width: 16px;
 }
@@ -80,6 +79,7 @@ header {
 main {
     padding: 32px 24px;
 }
+
 .boas_vindas {
     margin-bottom: 40px;
 }
@@ -89,15 +89,14 @@ main {
     font-weight: 300;
     color: var(--primary-text-color);
     margin-bottom: 16px;
-
 }
 
 .boas_vindas h1 strong {
     font-weight: 500;
-
 }
+
 .boas_vindas p {
-    color: var(--secundary-text-color);
+    color: var(--secondary-text-color);
     font-size: 14px;
     line-height: 150%;
     font-style: italic;
@@ -110,13 +109,14 @@ main {
 }
 
 .assuntos button {
-    background: var(--button-bg);
     border: none;
+    background: var(--button-bg);
     display: flex;
     align-items: center;
     gap: 16px;
     padding: 12px;
-    border-radius: 12px; 
+    border-radius: 12px;
+    box-shadow: var(--shadow);
     font-size: 18px;
     font-weight: 500;
     color: var(--primary-text-color);
@@ -126,16 +126,16 @@ main {
 .assuntos button div {
     width: 40px;
     height: 40px;
-    padding: 5px;
+    padding: 0;
     border-radius: 5px;
 }
+
 .assuntos button img {
     width: 100%;
 }
 
 .botao_html div {
     background: var(--bg-html);
-
 }
 
 .botao_css div {
@@ -153,14 +153,14 @@ main {
 @media(min-width: 1100px) {
     body {
         background: var(--bg-desktop) var(--bg-color);
-        background-repeat: no-repeat;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 
     header {
         margin-block: 81px;
     }
-    
+
     .tema {
         gap: 16px;
     }
@@ -177,7 +177,7 @@ main {
     .tema button div {
         width: 20px;
         height: 20px;
-    } 
+    }
 
     main {
         display: flex;
@@ -186,14 +186,14 @@ main {
     }
 
     section {
-        width: 150%;
+        width: 100%;
     }
 
     .boas_vindas h1 {
         font-size: 64px;
         margin-bottom: 48px;
     }
-
+    
     .boas_vindas p {
         font-size: 20px;
     }
@@ -203,7 +203,7 @@ main {
     }
 
     .assuntos button {
-        font-size: 20px;
+        font-size: 28px;
         padding: 20px;
         gap: 32px;
     }

@@ -1,49 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+import { verificarTema, trocarTema } from "../../helpers/tema-helper.js"
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
-    <link rel="stylesheet" href="resultado.css">
-    <script src="./resultado.js" type="module" defer></script>
-    <title>Quiz App</title>
-</head>
+const botaoTema = document.querySelector(".tema button")
+const body = document.querySelector("body")
+const assunto = localStorage.getItem("assunto")
+const botaoJogarNovamente = document.querySelector("main button")
 
-<body >
-    <header>
-        <div class="assunto">
-            <div class="assunto_icone">
-                <img src="../../assets/images/icon-accessibility.svg" alt="icone Acessibilidade">
-            </div>
+botaoTema.addEventListener("click", () => {
+    trocarTema(body, botaoTema)
+})
 
-            <h1>Acessibilidade</h1>
-        </div>
+botaoJogarNovamente.addEventListener("click", jogarNovamente)
 
-        <div class="tema">
-            <img src="../../assets/images/icon-sun-dark.svg" alt="Icone do sol">
-            <button>
-                <div></div>
-            </button>
-            <img src="../../assets/images/icon-moon-dark.svg" alt="Icone da lua">
-        </div>
-    </header>
+verificarTema(body, botaoTema)
 
-    <main>
-        <h2>
-            Quiz completo <br>
-            <strong>Seus pontos ...</strong>
-        </h2>
-        <div>
-            <section class="pontuacao">
-               
-            </section>
+function alterarAssunto() {
+    const divIcone = document.querySelector(".assunto_icone")
+    const iconeImg = document.querySelector(".assunto_icone img")
+    const assuntoTitulo = document.querySelector(".assunto h1")
 
-            <button>Jogar Novamente</button>
-        </div>
-    </main>
-</body>
+    divIcone.classList.add(assunto.toLowerCase())
+    iconeImg.setAttribute("src", `../../assets/images/icon-${assunto.toLowerCase()}.svg`)
+    iconeImg.setAttribute("alt", `ìcone de ${assunto}`)
+    assuntoTitulo.innerText = assunto
+}
 
-</html>
+alterarAssunto()
+
+function inserirResultado() {
+    const sectionPontuacao = document.querySelector(".pontuacao")
+    const divAssunto = document.querySelector(".assunto")
+    const pontos = localStorage.getItem("pontos")
+
+    sectionPontuacao.innerHTML = `
+        ${divAssunto.outerHTML}
+
+        <strong>${pontos}</strong>
+
+        <p>de 10</p>
+    `
+}
+
+function jogarNovamente() {
+    localStorage.removeItem("pontos")
+    localStorage.removeItem("assunto")
+    window.location.href = "../../index.html"
+}
+
+inserirResultado()
