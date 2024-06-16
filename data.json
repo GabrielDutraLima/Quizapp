@@ -213,8 +213,8 @@
             ]
         },
         {
-            "title": "Javascript",
-            "icon": "../../assets/images/icon-js.svg",
+            "title": "javascript",
+            "icon": "../../assets/images/icon-javascript.svg",
             "questions": [
                 {
                     "question": "Qual é a sintaxe correta para mostrar 'Hello World' em uma caixa alert?",
